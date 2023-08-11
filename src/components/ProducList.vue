@@ -1,8 +1,8 @@
 <template>
-  <div class="row">
+  <div class="row row-cols-1 row-cols-md-3 card-group-55">
     <div
-      class="card"
-      style="width: 15rem"
+      class="card h-100 p-4"
+      style="width: 100%"
       v-for="item in products"
       :key="item.id"
     >
@@ -20,16 +20,10 @@
 </template>
 
 <script>
-// import products from "../mock/products.json";
 import { mapGetters, mapActions } from "vuex";
 
 export default {
   name: "ProductList",
-  //   data() {
-  //     return {
-  //       products,
-  //     };
-  //   },
   computed: {
     ...mapGetters(["products"]),
   },
